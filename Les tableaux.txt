@@ -1,0 +1,71 @@
+Les tableaux
+	Tableau a une dimension:
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int T[20];
+    int i,n;
+    printf("donner la valeur de n :");
+    scanf("%d", &n);
+    for(i=0;i<n;i++){ //saisie 
+        printf("T[%d]=", i);
+        scanf("%d", &T[i]);
+    }
+    for(i=0; i<n;i++){ //affichage
+        printf("%d ",T[i]);
+    }
+    }
+	Tri d’un tableau a une dimension :
+#include <stdio.h>
+int main() {
+    int tableau[] = {12, 11, 13, 5, 6};
+    int taille = sizeof(tableau) / sizeof(tableau[0]);
+
+    printf("Tableau non trié : ");
+    for (int i = 0; i < taille; i++) {
+        printf("%d ", tableau[i]);
+    }
+    printf("\n");
+    int echange;
+    do {
+        echange = 0;
+        for (int i = 0; i < taille - 1; i++) {
+            if (tableau[i] > tableau[i + 1]) {
+                int temp;
+                temp = tableau[i];
+                tableau[i] = tableau[i + 1];
+                tableau[i + 1] = temp;
+                echange ++;
+            }
+        }
+    } while (echange);
+
+    printf("Tableau trié : ");
+    for (int i = 0; i < taille; i++) {
+        printf("%d ", tableau[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+	Tableau à deux dimensions :
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int T[2][2];
+    int i,j;
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+         printf("donner une valeur :[%d][%d]",i,j);
+        scanf("%d", &T[i][j]);
+        
+        }
+    }
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            printf("%7d", T[i][j]);
+            
+        }
+        printf("\n");
+    }
+    }
